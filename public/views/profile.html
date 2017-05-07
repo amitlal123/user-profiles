@@ -1,0 +1,31 @@
+<div>
+
+  <div class="header">
+    The Most Amazing Social Media Site Ever
+  </div>
+
+  <div class="logo">
+    <a ui-sref="home">
+      <img src="../images/logo2.png" alt="logo" />
+    </a>
+  </div>
+
+  <div class="container">
+    {{errorMessage}}
+    <div class="profile">
+      <ul>
+        <li class="bolded">{{ currentUser.name }}</li>
+      </ul>
+    </div>
+
+
+    <div class="friends">
+      <ul ng-repeat="friend in friends">
+        <img ng-src="{{ friend.pic }}">
+        <li class="bolded">{{ friend.name }}</li>
+        <li>{{ friend.status }}</li>
+        <hr>
+      </ul>
+    </div>
+  </div>
+</div>
